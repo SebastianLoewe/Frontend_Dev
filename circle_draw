@@ -1,0 +1,18 @@
+var x;
+var y;
+var diameter = 20;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+
+  noCursor();
+  var x = mouseX;
+  var y = mouseY;
+
+  fill(x, 30, 100)
+  circle(x, y, diameter);
+
+}
