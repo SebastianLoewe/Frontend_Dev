@@ -1,0 +1,33 @@
+ var a;
+ var b;
+ var c;
+ var d;
+
+
+ function setup() {
+   createCanvas(600, 600);
+   background(220);
+ }
+
+ function draw() {
+
+ }
+
+ function mouseDragged() {
+
+   a = mouseX;
+   b = mouseY;
+   c = 30;
+   d = random(mouseX);
+
+   circle(a, b, c);
+   circle(b, a, c);
+   circle(a + 20, b - 20, c);
+
+ }
+
+ function mousePressed() {
+
+   fill(a, b, d);
+
+ }
