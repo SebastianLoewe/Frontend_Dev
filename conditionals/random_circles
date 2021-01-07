@@ -1,0 +1,25 @@
+function setup() {
+  createCanvas(800, 600);
+
+}
+
+function draw() {
+ 
+  noCursor();
+}
+
+
+function mouseDragged() {
+
+ for (var j = 0; j < 100; j++) {
+
+    var x = random(width);
+    var y = random(height);
+    var r = random(10, 50);
+
+    fill(random(250), random(250), random(250), 100);
+    noStroke();
+    circle(x, y, r);
+  
+  }
+}
