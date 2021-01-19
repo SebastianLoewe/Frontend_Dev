@@ -1,0 +1,22 @@
+// harter Zeilenumnruch: mit  \n 
+var txt = "Der Satz würde 'weitergehen', wenn er nicht umgebrochen würde.";
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(220);
+  textFont("Arial");
+  textStyle(BOLD);
+  textSize(20);
+  textAlign(LEFT);
+  textLeading((mouseX / width) * 100); //Zeilenabstand
+  txtWdth = textWidth(txt);
+  rect(10,10, txtWdth, 20)
+  text(txt, 10, 10, 300, 400); // text(x,y,w,h); 
+}
+
+// https://fontlibrary.org/
+// Escape-Zeichen backlash: \ 
+// falls ihr mal "" Anführungsstriche im Text haben wollt
