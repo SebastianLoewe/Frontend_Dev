@@ -1,0 +1,6 @@
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    console.log("image saved");
+    saveCanvas('myImage', 'jpg');
+  }
+}
