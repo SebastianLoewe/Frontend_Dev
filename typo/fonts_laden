@@ -1,0 +1,19 @@
+var myFont;
+
+function preload() {
+  myFont = loadFont('font/cmunorm.ttf');
+}
+
+function setup() {
+  createCanvas(400, 400); 
+  background(220);
+
+  fill('black');
+  textFont(myFont);
+  
+  textSize(100);
+  text('p5*js', 50, 150);
+}
+
+function draw() {
+}
