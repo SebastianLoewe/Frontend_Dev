@@ -1,0 +1,27 @@
+var img;
+var i, j, c;
+var pixsz = 40;
+
+function preload() {
+  //img = loadImage('image/rockies.jpg');
+  img = loadImage("https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"); 
+}
+
+function setup() {
+  createCanvas(img.width, img.height);
+   image(img, 0, 0);
+}
+
+function draw() {
+}
+
+function mousePressed() {
+
+  for (i = 0; i < width; i += pixsz) {
+    for (j = 0; j < height; j += pixsz) {
+      c = img.get(i, j, pixsz, pixsz);
+      image(c, j, i);
+      
+    }    
+  }
+}
