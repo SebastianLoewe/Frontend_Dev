@@ -1,0 +1,95 @@
+
+html, 
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: top;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.wrapper>* {
+  padding: 5px;
+  flex: 1 100%;
+}
+
+.header {
+  background: lightblue;
+}
+
+.footer {
+  background: lightsteelblue;
+}
+
+.main {
+  text-align: left;
+  background: lightcyan;
+}
+
+.aside-1 {
+  background: powderblue;
+}
+
+.aside-2 {
+  background: powderblue;
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) { /* We tell both sidebars to share a row */
+  
+  .aside   {flex: 1 0 0;}  /* This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional.*/
+}
+
+/* Large screens */
+@media all and (min-width: 800px) {  /* We invert order of first sidebar and main
+   * And tell the main element to take twice (flex: 2) as much width as the other two sidebars */
+  .main     {flex: 2 0px;}
+  .aside-1  {order: 1;}
+  .main     {order: 2;}
+  .aside-2  {order: 3;}
+  .footer   {order: 4;}
+}
+
+
+p {
+  color: midnightblue;
+  font-family: "Helvetica", sans-serif;
+  font-size: 12pt;
+  margin: 10px;
+}
+
+h1 {
+  color: midnightblue;
+  font-weight: bold;
+  font-family: "Helvetica", sans-serif;
+  font-size: 30pt;
+  text-align: center;
+  margin: 15pt;
+  padding: 0pt;
+}
+
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  color: palegoldenrod;
+}
+
+
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+https://www.w3schools.com/tags/tag_html.asp
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
