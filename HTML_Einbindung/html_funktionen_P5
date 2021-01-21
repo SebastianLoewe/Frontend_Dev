@@ -1,0 +1,43 @@
+var diameter = 5;
+var element;
+
+function setup() {
+  
+  img = createImg("http://th07.deviantart.net/fs70/PRE/i/2011/260/3/5/dash_hooray_by_rainbowcrab-d49xk0d.png", 'Filly-Pferdchen'); //Bild als DOM-Element (DOM = Document Object Model für HTML)
+  img.position(600, 500);
+  img.size(400, 400);
+  img.mousePressed(uniHide);
+  
+  let div = createDiv('This is a HTML string!');
+  div.position(50, 100);
+  div.size(150, 150);
+  
+  element = createElement('h1', 'This is a P5-HTML-Element');
+  element.position(100, 500);
+  
+  var myCanvas = createCanvas(600, 400);
+  myCanvas.position(100, 100);
+  myCanvas.style('display', 'block'); //keine Scroll-Bars
+  myCanvas.mousePressed(incDiameter);
+
+}
+
+function incDiameter() {
+	diameter = diameter + 5;
+}
+
+function uniHide() {
+  img.hide();
+}
+
+function mousePressed(){
+  element.html("This is the clicked element!");
+  element.style('background-color','skyblue');
+  element.style('font-family','Arial');
+}
+
+function draw() {
+  background(220, 180, 200);
+  circle(mouseX, height / 2, 100);
+  circle(width / 4, height / 2, diameter);
+}
