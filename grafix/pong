@@ -1,0 +1,50 @@
+var x = 30;
+var y = 50;
+var xspeed = 5;
+var yspeed = 7;
+var m1;
+var m2;
+score = 0;
+
+function setup() {
+  createCanvas(400, 400);
+  
+}
+
+function draw() {
+
+  noCursor();
+  background(120);
+  bewegeDich();
+  zeichneDich();
+  pralleAb();
+  
+  m1 = mouseY-40;
+  m2 = mouseY +40;
+  strokeWeight(5);
+  line(20, m1, 20, m2);
+  text("Score:"+ score, 20, 20)
+
+}
+
+
+function bewegeDich() {
+  x = x + xspeed;
+  y = y + yspeed;
+}
+
+function zeichneDich() {
+  circle(x, y, 40);
+}
+
+
+function pralleAb() {
+  
+  if ((x >= width) || (x == 40 && y > m1 && y < m2)) {
+    xspeed = xspeed * -1;
+    score++;
+  } else if ((y >= height) || (y <= 0)) {
+    yspeed = yspeed * -1;
+  }
+
+}
